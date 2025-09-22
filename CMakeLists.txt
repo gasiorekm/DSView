@@ -108,8 +108,13 @@ link_directories(${GLIB_LIBDIR})
 #===============================================================================
 #= python3
 #-------------------------------------------------------------------------------
-
+set(Python_ADDITIONAL_VERSIONS 3.12)
 find_package(Python3 COMPONENTS Development QUIET)
+
+message("Python_FOUND:${Python_FOUND}")
+message("Python_VERSION:${Python_VERSION}")
+message("Python_Development_FOUND:${Python_Development_FOUND}")
+message("Python_LIBRARIES:${Python_LIBRARIES}")
 
 if (Python3_FOUND)
 	message("----- python3:")
